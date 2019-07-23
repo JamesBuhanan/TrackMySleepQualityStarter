@@ -1,0 +1,3 @@
+package com.petersburg_studio.trackmysleepqualitystarter.database
+
+interface SleepDatabaseDao
