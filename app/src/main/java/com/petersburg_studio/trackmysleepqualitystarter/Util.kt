@@ -31,7 +31,7 @@ fun convertDurationToFormatted(startTimeMilli: Long, endTimeMilli: Long, res: Re
         }
         else -> {
             val hours = TimeUnit.HOURS.convert(durationMilli, TimeUnit.MILLISECONDS)
-            val minutes = TimeUnit.MINUTES.convert(durationMilli, TimeUnit.MILLISECONDS) % 3600
+            val minutes = TimeUnit.MINUTES.convert(durationMilli, TimeUnit.MILLISECONDS) % 60 % 60
             val seconds = TimeUnit.SECONDS.convert(durationMilli, TimeUnit.MILLISECONDS) % 60
             res.getString(R.string.hours_length, hours, minutes, seconds, weekdayString)
         }
